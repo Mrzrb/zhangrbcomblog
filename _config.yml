@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
-timezone:
+title: Mrzhangrb's blog
+subtitle: robin的博客
+description: 技术，生活，游戏的记录
+keywords: 技术、生活、游戏
+author: mrzhangrb
+language: zh-CN
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://zhangrb.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

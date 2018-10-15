@@ -1,7 +1,7 @@
 ---
 title: redis-memory
 date: 2018-10-15 20:11:15
-tags:
+tags: redis redis-source
 ---
 
 # zmalloc
