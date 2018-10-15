@@ -4,7 +4,6 @@ date: 2018-10-15 20:11:15
 tags:
 ---
 
-[toc]
 # zmalloc
 
 ```c
@@ -112,10 +111,4 @@ void zfree(void *ptr) {
 
 ```HAVE_MALLOC_SIZE```这个常量代表了系统是否有可malloc，如果没有的话需要自己手动来求指针指向的内存的大小，所以上面函数都有两种情况。
 
-下图展示了没有malloc函数时候的内存分配时的实际情况
-
-```
-graph LR
-A[prefixBlock 用来存分配的内存的大小] --- B[realBlock]
-```
 
