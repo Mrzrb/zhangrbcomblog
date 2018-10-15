@@ -30,6 +30,7 @@ void *zmalloc(size_t size) {
 }
 ```
 
+<!--more-->
 # zcalloc
 
 ```c
