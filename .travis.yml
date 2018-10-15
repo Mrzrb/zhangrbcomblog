@@ -3,6 +3,13 @@ language: node_js
 # node版本
 node_js: stable
 # 设置只监听哪个分支
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $REPO_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
 branches:
   only:
   - source
