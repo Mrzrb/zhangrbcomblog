@@ -14,8 +14,8 @@ cache:
     - node_modules
 # tarvis生命周期执行顺序详见官网文档
 before_install:
-- git config --global user.name "Godi13"
-- git config --global user.email "mqzq9388@gmail.com"
+- git config  user.name "zhangrb"
+- git config  user.email "mrzhangrb@outlook.com"
 # 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除
 - curl -o- -L https://yarnpkg.com/install.sh | bash
 - export PATH=$HOME/.yarn/bin:$PATH
@@ -32,5 +32,5 @@ after_success:
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
 # 这里的 REPO_TOKEN 即之前在 travis 项目的环境变量里添加的
-- git push --quiet --force https://15bce1e41fd8fdb50d0307a7ab58a8525375efc7@github.com/Godi13/Godi13.github.io.git
+- git push --quiet --force https://$REPO_TOKEN@github.com:Mrzrb/zhangrbcomblog.git
   master
