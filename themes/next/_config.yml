@@ -815,6 +815,10 @@ marked:
 sitemap:
     path: sitemap.xml
 
+# Local search
+local_search:
+  enable: true
+
 
 # Assets
 css: css
