@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zhangrb.com
+url: http://www.zhangrb.com
 root: /
 permalink: post/:abbrlink.html
 abbrlink:
