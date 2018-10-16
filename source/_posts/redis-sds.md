@@ -3,7 +3,7 @@ title: redis-sds
 date: 2018-10-15 23:13:25
 tags:
 - redis
-- souce code
+- source code
 categories: 
 - redis
 ---
