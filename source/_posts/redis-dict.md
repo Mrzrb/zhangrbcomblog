@@ -33,7 +33,6 @@ key 储存了键， v储存了值，v的结构如下所示，v可以储存一个
         int64_t s64;
     } v;
 ```
-<!--more-->
 
 ## dictht 结构
 
@@ -99,3 +98,31 @@ iterators是当前字典正在运行的安全迭代器的数量
 - 字典的负载因子大于等于1并且服务器没有在执行BGSAVE或者BGREWITEAOF
 - 字典的负载因子大于5并且服务器在执行BGSAVE或者BGREWITEAOF
 - 字典负载因子小于0.1，会执行收缩操作
+
+## dict渐进式rehash
+
+rehash不是一次性完成的，在rehash的时候字典会同时操作(delete,find,update)两个hash表。
+
+如：
+```c
+dictEntry *dictFind(dict *d, const void *key)
+{
+    dictEntry *he;
+    unsigned int h, idx, table;
+
+    // 字典（的哈希表）为空
+    if (d->ht[0].size == 0) return NULL; /* We don't have a table at all */
+
+    // 如果条件允许的话，进行单步 rehash
+    if (dictIsRehashing(d)) _dictRehashStep(d);
+//！！！！！！注意在这里进行了rehash单步操作
+    // 计算键的哈希值
+    h = dictHashKey(d, key);
+    // 在字典的哈希表中查找这个键
+    // T = O(1)
+   //........等等
+}
+```
+
+# 结尾
+字典部分就详解完毕了，如果后续有补充，会在本文进行修改添加，欢迎关注哦~~
