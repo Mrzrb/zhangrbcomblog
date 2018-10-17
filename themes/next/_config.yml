@@ -113,8 +113,8 @@ menu_icons:
 # Schemes
 # scheme: Muse
 # scheme: Mist
-# scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -654,7 +654,7 @@ tabs:
 
 # Use velocity to animate everything.
 motion:
-  enable: false
+  enable: true
   async: false
   transition:
     # Transition variants:
