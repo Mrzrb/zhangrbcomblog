@@ -1,11 +1,13 @@
 ---
-title: redis-sds
+title: redis-sds - 带你搞懂redis
 date: 2018-10-15 23:13:25
+description: 本文详解了redis底层字符串sds的实现过程
 tags:
 - redis
 - source code
 categories: 
 - redis
+- 带你搞懂redis
 ---
 # Sds
 
