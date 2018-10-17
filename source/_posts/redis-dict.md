@@ -1,7 +1,6 @@
 ---
 title: redis字典详解 - 带你搞懂redis
 keywords: redis,字典,dict,redis字典详解
-description: 本文详解了redis字典的实现过程
 date: 2018-10-16 17:03:51
 tags:
 - redis

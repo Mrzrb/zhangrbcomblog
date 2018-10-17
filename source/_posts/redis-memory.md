@@ -1,7 +1,6 @@
 ---
 title: redis-memory - 带你搞懂redis
 date: 2018-10-15 20:11:15
-description: 本文详解了redis底层memory的实现过程
 tags: 
 - redis
 - source code

@@ -1,7 +1,6 @@
 ---
 title: redis-adlist - 带你搞懂redis
 date: 2018-10-16 00:14:49
-description: 本文详解了redis list的实现过程
 tags:
 - redis
 - source code
