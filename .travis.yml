@@ -1,5 +1,6 @@
 language: node_js
-node_js: stable
+node_js: 
+  - "10"
 deploy:
   provider: source
   skip-cleanup: true
@@ -38,4 +39,4 @@ after_success:
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://$REPO_TOKEN@github.com/Mrzrb/zhangrbblogrelease.git
   master
-- ssh root@47.52.172.108 "/usr/share/nginx/html/zhangrb.com.blog/deploy.sh"
+- ssh root@47.52.172.108 "/usr/share/nginx/html/zhangrb.blog.release/deploy.sh"
