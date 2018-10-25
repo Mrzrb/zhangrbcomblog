@@ -46,13 +46,13 @@ zskiplist *zslCreate(void) {
 }
 ```
 
+<!--more-->
 
 
 ```zslCreate```的作用主要是初始化了跳跃表，以及初始化了zsl的header节点的level.
 
-<!--more-->
 
-我们关键看27行 ```zslCreateNode```的代码
+我们关键看 ```zslCreateNode```的代码
 
 
 ```c
@@ -68,6 +68,7 @@ zskiplistNode *zslCreateNode(int level, double score, robj *obj) {
     return zn;
 }
 ```
+
 
 ```zslCreateNode```创建了一个```zskiplistNode```并进行了初始化
 
