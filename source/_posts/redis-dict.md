@@ -13,7 +13,7 @@ categories:
 # 字典结构
 字典的结构如图所示
 
-![](http://ord4xgm8c.bkt.clouddn.com/18-10-16/20844585.jpg)
+![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/18-10-26/39055441.jpg)
 
 一个字典结构(dict)里面记录了dictType,有两个哈希表(为了rehash)，rehashidx记录了当前rehash的进度
 
@@ -75,7 +75,7 @@ iterators是当前字典正在运行的安全迭代器的数量
 
 向字典中加入元素的过程如下图所示：
 
-![](http://ord4xgm8c.bkt.clouddn.com/18-10-16/10173922.jpg)
+![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/18-10-26/85703852.jpg)
 
 ## 添加过程中出现键冲突？
 
