@@ -382,7 +382,7 @@ valine:
   appid:  t0Sp86qRGvN1HXO8t3vFQI2k-gzGzoHsz # your leancloud application appid
   appkey:  ixP9hIfnaJHaGkFYuuiuOTH3 # your leancloud application appkey
   notify: true # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: true # Verification code
+  verify: false # Verification code
   placeholder: say what you want # comment box placeholder
   avatar: retro # gravatar style
   guest_info: nick,mail,link # custom comment header
@@ -531,9 +531,10 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  appid:  t0Sp86qRGvN1HXO8t3vFQI2k-gzGzoHsz # your leancloud application appid
+  appkey:  ixP9hIfnaJHaGkFYuuiuOTH3 # your leancloud application appkey
+
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
