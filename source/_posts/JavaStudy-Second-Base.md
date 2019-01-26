@@ -19,4 +19,6 @@ public class HelloWorld{
   }
 }
 ```
+
+<!--more-->
 java程序的入口是main函数。约定main函数为static 的，参数为``` String[] ```。
