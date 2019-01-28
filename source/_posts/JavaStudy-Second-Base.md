@@ -56,3 +56,5 @@ public class Welcome {
     }
 }
 ```
+
+{% gist 6bf1683f7e464dd0acf4231c20ac6622 [Welcome.java] %}
