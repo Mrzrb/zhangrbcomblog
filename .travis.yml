@@ -32,6 +32,7 @@ install:
 script:
 - hexo clean
 - hexo generate
+- npm run ci
 after_success:
 - cd ./public
 - git init
