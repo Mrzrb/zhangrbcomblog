@@ -32,7 +32,7 @@ java的数值类型有如下几种类型:(图片摘自《Java程序设计》)
 
 ### 书中一个计算分秒的小程序
 
-```java
+<!-- ```java
 package chapter.one;
 
 import java.util.Scanner;
@@ -55,4 +55,6 @@ public class Welcome {
 
     }
 }
-```
+``` -->
+
+<script src="https://gist.github.com/Mrzrb/6bf1683f7e464dd0acf4231c20ac6622.js"></script>
