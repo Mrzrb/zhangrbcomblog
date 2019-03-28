@@ -10,15 +10,15 @@ description:
 
 嘿嘿，其实最近一直在看java相关的东西，上下班通勤的时候再看王争老师的数据结构，正好看到链表这一章，就自己实现了一下链表。 完了又去看了一下jdk对链表的实现。发现java对链表的实现还是挺优雅的。通过接口，可以让实现的链表扩展其他功能，比如Deque等
 
-java的链表继承于```AbstractSequentialList```并实现了```List``` ```Deque``` ```Clonable``` ```java.io.Serializable ``` 接口
+java的链表继承于``AbstractSequentialList`` 并实现了 ``List`` ``Deque`` ``Clonable`` ``java.io.Serializable `` 接口
 
 ![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/image/20190328164737.png)
 
 ![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/image/20190328165145.png)
 
-提供两个构造函数，默认的构造函数和一个接受```Collection <? extends E>```的构造函数
+提供两个构造函数，默认的构造函数和一个接受``Collection <? extends E>``的构造函数
 
-- ```Collection <? extends E>```的构造函数内部调用了```addAll```方法来进行链表的初始化
+- ``Collection <? extends E>``的构造函数内部调用了``addAll``方法来进行链表的初始化
 
 如下是java addAll的代码
 
