@@ -1,19 +1,19 @@
 ---
-title: redis字典详解
+title: redis字典详解 - 带你搞懂redis
 keywords: redis,字典,dict,redis字典详解
-description: 本文详解了redis字典的实现过程
 date: 2018-10-16 17:03:51
 tags:
 - redis
 - source code
 categories: 
 - redis
+- 带你搞懂redis
 ---
 
 # 字典结构
 字典的结构如图所示
 
-![](http://ord4xgm8c.bkt.clouddn.com/18-10-16/20844585.jpg)
+![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/18-10-26/39055441.jpg)
 
 一个字典结构(dict)里面记录了dictType,有两个哈希表(为了rehash)，rehashidx记录了当前rehash的进度
 
@@ -34,7 +34,6 @@ key 储存了键， v储存了值，v的结构如下所示，v可以储存一个
     } v;
 ```
 <!--more-->
-
 ## dictht 结构
 
 dictht结构内包含:
@@ -76,7 +75,7 @@ iterators是当前字典正在运行的安全迭代器的数量
 
 向字典中加入元素的过程如下图所示：
 
-![](http://ord4xgm8c.bkt.clouddn.com/18-10-16/10173922.jpg)
+![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/18-10-26/85703852.jpg)
 
 ## 添加过程中出现键冲突？
 
@@ -99,3 +98,31 @@ iterators是当前字典正在运行的安全迭代器的数量
 - 字典的负载因子大于等于1并且服务器没有在执行BGSAVE或者BGREWITEAOF
 - 字典的负载因子大于5并且服务器在执行BGSAVE或者BGREWITEAOF
 - 字典负载因子小于0.1，会执行收缩操作
+
+## dict渐进式rehash
+
+rehash不是一次性完成的，在rehash的时候字典会同时操作(delete,find,update)两个hash表。
+
+如：
+```c
+dictEntry *dictFind(dict *d, const void *key)
+{
+    dictEntry *he;
+    unsigned int h, idx, table;
+
+    // 字典（的哈希表）为空
+    if (d->ht[0].size == 0) return NULL; /* We don't have a table at all */
+
+    // 如果条件允许的话，进行单步 rehash
+    if (dictIsRehashing(d)) _dictRehashStep(d);
+//！！！！！！注意在这里进行了rehash单步操作
+    // 计算键的哈希值
+    h = dictHashKey(d, key);
+    // 在字典的哈希表中查找这个键
+    // T = O(1)
+   //........等等
+}
+```
+
+# 结尾
+字典部分就详解完毕了，如果后续有补充，会在本文进行修改添加，欢迎关注哦~~

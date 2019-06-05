@@ -1,11 +1,12 @@
 ---
-title: redis-adlist
+title: redis-adlist - 带你搞懂redis
 date: 2018-10-16 00:14:49
 tags:
 - redis
 - source code
 categories: 
 - redis
+- 带你搞懂redis
 ---
 
 # Adlist

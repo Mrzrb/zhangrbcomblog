@@ -1,16 +1,17 @@
 ---
-title: redis-sds
+title: redis-sds - 带你搞懂redis
 date: 2018-10-15 23:13:25
 tags:
 - redis
 - source code
 categories: 
 - redis
+- 带你搞懂redis
 ---
 # Sds
 
 ## sdshdr 保存字符串对象的结构
-
+ 
 ```c
 /*
  * 保存字符串对象的结构
@@ -29,7 +30,7 @@ struct sdshdr {
 
 ```
 
-![](http://ord4xgm8c.bkt.clouddn.com/18-9-29/49086653.jpg)
+![](http://zhangrb-image.oss-cn-beijing.aliyuncs.com/18-10-26/34107331.jpg)
 
 <!--more-->
 
